@@ -5,12 +5,12 @@
 # https://sdrausty.github.io/TermuxArch/CONTRIBUTORS Thank you for your help.
 ################################################################################
 # Running 'setupTermuxArch manual' will create 'setupTermuxArchConfigs.bash' from this file in the working directory.  Run 'setupTermuxArch' and file 'setupTermuxArchConfigs.bash' loads automaticaly once created, and this file is ignored at runtime; 'setupTermuxArch help' has additional information.  The mirror (information at https://wiki.archlinux.org/index.php/Mirrors and https://archlinuxarm.org/about/mirrors) can be changed to a desired geographic location in 'setupTermuxArchConfigs.bash' to resolve download, 404 and checksum issues should these take place.  User configurable variables are present in this file for your convenience:
-# DMVERBOSE="-v" 	# uncomment for verbose download tool output with curl and wget;  For verbose output throughout runtime change this setting in file 'setupTermuxArch' also.
-# DM=aria2c		# uncomment to use this download tool
-# DM=axel 		# uncomment to use this download tool
-# DM=curl		# uncomment to use this download tool
-# DM=lftp 		# uncomment to use this download tool
-# DM=wget		# uncomment to use this download tool
+ DMVERBOSE="-v" 	# uncomment for verbose download tool output with curl and wget;  For verbose output throughout runtime change this setting in file 'setupTermuxArch' also.
+ DM=aria2c		# uncomment to use this download tool
+ DM=axel 		# uncomment to use this download tool
+ DM=curl		# uncomment to use this download tool
+ DM=lftp 		# uncomment to use this download tool
+ DM=wget		# uncomment to use this download tool
 KEEP=1			# change to 0 to keep downloaded image
 KOE=0			# do not change, not user configurable
 # KID=1			# do not change, not user configurable;  Used for testing, timing and development.  Change to 1 and execute script TermuxArch/scripts/frags/stdoutbench.sh for timing Arch Linux in Termux PRoot.
@@ -126,5 +126,5 @@ _PR00TSTRING_() { # construct the PRoot init statement
 }
 _PR00TSTRING_
 # uncomment the next line to test function _PR00TSTRING_
-# printf "%s\\n" "$PROOTSTMNT" && exit
+ printf "%s\\n" "$PROOTSTMNT" && exit
 # knownconfigurations.bash EOF
